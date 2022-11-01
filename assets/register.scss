@@ -1,0 +1,204 @@
+:root {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-custom {
+    width: 1280px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    .container-custom {
+        .header-top {
+            background-color: black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+
+            .logo-brand {
+                margin-left: 1rem;
+
+                h1 {
+                    color: #fff;
+                    font-weight: 300;
+
+                }
+            }
+
+            .header-login {
+                color: #fff;
+                display: flex;
+                margin-right: 45px;
+                align-items: center;
+
+                h3 {
+                    margin: 0 1rem 0 0.5rem;
+                    font-weight: 400;
+                }
+
+                #login {
+                    color: #fff;
+                    margin-right: 1.5rem;
+                }
+
+                #register {
+                    color: #fff;
+                }
+            }
+        }
+
+        .header-bottom {
+            display: flex;
+            align-items: center;
+            height: 50px;
+            width: 100%;
+
+            a {
+                color: black;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0 0.7rem;
+
+            }
+
+            a.active {
+
+                border-bottom: 1px solid #000000;
+                ;
+            }
+
+            .home {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+.register {
+
+    .container-custom {
+
+        .title-register {
+            text-align: center;
+            margin-top:30px;
+            margin-bottom:50px;
+            h3 {
+                font-size: 40px;
+                font-weight: 400;
+            }
+        }
+
+        .form-register {
+
+            .row {
+                .left {
+                    .form-left {
+                        padding: 0 5.2rem;
+                       
+
+                        .col-12 { 
+                            position: relative;
+                            margin-bottom: 1.5rem;
+                            input {
+                                font-size:30px;
+                                color:black;
+                                width: 100%;
+                              border: none;
+                             
+                              padding-bottom:1rem;
+                              outline:none;
+                              &::placeholder {
+                                color:black;
+                                font-weight:400
+                              }
+                            }
+
+                            .overlay {
+                                content: "";
+                                position: absolute;
+                                width: 461px;
+                                height: 4px;
+                                bottom: 0;
+                                left: 4px;
+                               border: 1px solid #000000;
+                               background-color: #AE18E2;
+                              margin:0 0.5rem;
+                            }
+                            .validation{
+                                position: absolute;
+                                top: 10px;
+                                right: 20px;
+                                font-size:20px;
+                                color:#F50E0E;
+                                font-weight: 400;
+                            }
+
+                        }
+                    }
+                }
+
+                .right {
+                    .form-right {
+                        padding: 0 5.2rem;
+
+                        .col-12 {
+                            position: relative;
+                            margin-bottom: 1.5rem;
+                            input {
+                                outline:none;
+                                font-size:30px;
+                                color:black;
+                                width: 100%;
+                                border: none;
+                               
+                                padding-bottom:1rem;
+                                &::placeholder {
+                                    color:black;
+                                    font-weight:400
+                                }
+                            }
+                            .overlay {
+                                content: "";
+                                position: absolute;
+                                width: 461px;
+                                height: 4px;
+                                bottom: 0;
+                                left: 4px;
+                               border: 1px solid #000000;
+                               background-color: #AE18E2;
+                              margin:0 0.5rem;
+                            }
+                            .validation{
+                                position: absolute;
+                                top: 10px;
+                                right: 20px;
+                                font-size:20px;
+                                color:#F50E0E;
+                                font-weight: 400;
+                            }
+
+                        }
+
+
+                        .gender {
+                            display: flex;
+                            align-items: center;
+
+                            p {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
