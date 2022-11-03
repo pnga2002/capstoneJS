@@ -13,6 +13,7 @@
             document.querySelector('.pro-1').setAttribute('src', `${arrayProduct[random].image}`)
             document.querySelector('.product-desc1 h3').innerHTML = arrayProduct[random].name;
             document.querySelector('.product-desc1 p').innerHTML = arrayProduct[random].shortDescription;
+            document.querySelector('.btn-buynow').setAttribute('href',`./detail.html?id=${arrayProduct[random].id}`)
             console.log(arrayProduct[random].shortDescription)
         }
         function random2() {
@@ -20,6 +21,7 @@
                 document.querySelector('.pro-2').setAttribute('src', `${arrayProduct[random].image}`)
                 document.querySelector('.product-desc2 h3').innerHTML = arrayProduct[random].name;
                 document.querySelector('.product-desc2 p').innerHTML = arrayProduct[random].shortDescription;
+                document.querySelector('.btn-buynow').setAttribute('href',`./detail.html?id=${arrayProduct[random].id}`)
                 console.log(arrayProduct[random].shortDescription)
          }
 
@@ -28,6 +30,7 @@
                 document.querySelector('.pro-3').setAttribute('src', `${arrayProduct[random].image}`)
                 document.querySelector('.product-desc3 h3').innerHTML = arrayProduct[random].name;
                 document.querySelector('.product-desc3 p').innerHTML = arrayProduct[random].shortDescription;
+                document.querySelector('.btn-buynow').setAttribute('href',`./detail.html?id=${arrayProduct[random].id}`)
                 console.log(arrayProduct[random].shortDescription)
         }
         random1(
@@ -55,9 +58,9 @@ const renderProduct = (arrProduct) => {
 
             </div>
             <div class="card-bottom">
-                <button class="btn btn-buyitem">
+                <a class="btn btn-buyitem" href="./detail.html?id=${item.id}">
                     Buy now
-                </button>
+                </a>
                 <div class="price-pruduct">
                     <div class="price1">${item.price}$</div>
                 </div>
@@ -67,6 +70,7 @@ const renderProduct = (arrProduct) => {
         `
         return contentHTML
     }, '')
+    // console.log(contentProduct)
     document.querySelector('.product-wrap').innerHTML = contentProduct;
 }
 

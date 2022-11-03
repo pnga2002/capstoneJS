@@ -15,7 +15,7 @@
 
 <body>
     <header class="header">
-        <div class="container-custom">
+        <div class="container">
             <div class="header-top">
                 <div class="logo-brand">
                     <img src='./assets/img/image3.png' />
@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="header-bottom">
-                <a href="#" class="home active">Home</a>
+                <a href="./index.html" class="home active">Home</a>
                 <a href="#" class="men">Men</a>
                 <a href="#" class="woman">Woman</a>
                 <a href="#" class="kid">Kid</a>
@@ -52,14 +52,14 @@
                         <div class="col-6 left">
                             <div class="form-left row">
                                 <div class="col-12">
-                                    <input type="email" placeholder="email" />
+                                    <input id="email" type="email" placeholder="email" />
                                     <div class="overlay"></div>
                                     <div class="validation">
                                         (*)
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <input type="password" placeholder="password">
+                                    <input id="password" type="password" placeholder="password">
                                     <div class="overlay"></div>
                                     <div class="validation">
                                         (*)
@@ -81,14 +81,14 @@
                         <div class="col-6 right">
                             <div class="form-right row">
                                 <div class="col-12">
-                                    <input type="text" placeholder="name" />
+                                    <input id="name" type="text" placeholder="name" />
                                     <div class="overlay"></div>
                                     <div class="validation">
                                         (*)
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <input type="tel" placeholder="phone" />
+                                    <input id="phone" type="tel" placeholder="phone" />
                                     <div class="overlay"></div>
                                     <div class="validation">
                                         (*)
@@ -97,12 +97,16 @@
 
                                 <div class="gender d-flex">
                                     <p>Gender</p>
-                                    <input type="radio" id="male" name="gender" value="Male">
+                                    <div>
+                                        <input type="radio" id="male" name="gender" value="Male">
                                     <label for="male">Male</label><br>
-                                    <input type="radio" id="female" name="gender" value="Female">
+                                    </div>
+                                    <div>
+                                        <input type="radio" id="female" name="gender" value="Female">
                                     <label for="female">Female</label><br>
+                                    </div>
                                 </div>
-                                <button type="submit">Submit</button>
+                                <button type="submit" id="btnSubmit">Submit</button>
                             </div>
                         </div>
                     </div>
@@ -113,9 +117,57 @@
 
 
     </main>
-    <footer>
-
-    </footer>
+     <!-- footer -->
+  <footer>
+    <div class="">
+      <div class=" footer-top">
+        <div class="row footer-top-content">
+          <div class="col-4 footerCol">
+            <h3 class="Ftitle">GET HELP</h3>
+            <ul>
+              <li>Contact us</li>
+              <li>Shopping</li>
+              <li>NIKEiD</li>
+              <li>Nike+</li>
+            </ul>
+          </div>
+          <div class="col-3 footerCol">
+            <h3 class="Ftitle">ORDERS</h3>
+            <ul>
+              <li>Paymeny options</li>
+              <li>Shipping anh delivery</li>
+              <li>Returns</li>
+            </ul>
+          </div>
+          <div class="col-5 footerCol">
+            <h3 class="Ftitle">REGISTER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum dolor aut ducimus obcaecati iste laboriosam quibusdam ab aliquam officiis.</p>
+            <a href="" class="alink">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class=" footer-bottom">
+        <div class="row footer-bottom-content">
+          <div class="col-4 footerCol">
+            <h3 class="Ftitle">EMAIL SIGN UP</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, eaque?</p>
+            <a href="" class="alink">Sign up now</a>
+          </div>
+          <div class="col-3 footerCol">
+            <h3 class="Ftitle">GIFT CARDS</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, eaque?</p>
+            <a href="" class="alink">View cards</a>
+          </div>
+          <div class="col-5 footerCol">
+            <h3 class="Ftitle">STORES NEAR YOU</h3>
+            <p>Lorem, ipsum dolor. Lorem, ipsum dolor.</p>
+            <a href="" class="alink">View cards</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -124,6 +176,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js"
+        integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+        <script src="./models/register.js"></script>
 </body>
 
 </html>

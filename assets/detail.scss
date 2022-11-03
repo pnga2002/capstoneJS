@@ -1,0 +1,122 @@
+$bg-gray: #f8f8f8;
+$bg-darkGray:#cccccc;
+
+$text-dark:#000;
+$text-green:#1ed90e;
+$text-red:#fc0303;
+$text-white:#fff;
+@mixin textStyle($color,$fs,$fw,$lh){
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+    line-height: $lh;
+}
+body{
+    font-family: 'Inter', sans-serif;
+}
+@import '../assets/header';
+.container{
+    // padding-top: 60px;
+}
+.productDetail {
+    .detail-content {
+        padding-top: 30px;
+        .detailimg {
+            background-color: $bg-gray;
+            position: relative;
+            width: 334px;
+            height: 355px;
+            img {
+                position: absolute;
+                width: 220px;
+                // height: 156px;
+                left: 57px;
+                top: 47px;
+            }
+        }
+        .detailND{
+            padding-left: 120px;
+            h1{
+                @include textStyle($text-dark,30px,300,36px )
+            }
+            p{
+                @include textStyle($text-dark, 16px, 400, 19px)
+            }
+            h3{
+                @include textStyle($text-green, 24px,600 , 29px)
+            }
+            .buttonGroup{
+                
+                padding-top: 17px;
+                button{
+                    background: $bg-darkGray;
+                    @include textStyle($text-dark, 24px, 600, 29px)
+                }
+            }
+            h2{
+                padding-top: 17px;
+                @include textStyle($text-red, 30px, 600, 36px)
+            }
+            .detailSoluong{
+                button{
+                    width: 50px;
+                    height: 50px;
+                    background: linear-gradient(180deg, #6181F3 0%, #7C97F5 99.48%);
+                    @include textStyle($text-white, 30px, 400, 36px)
+                }
+                p{
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    @include textStyle($text-dark, 30px, 400, 50px)
+                }
+            }
+            .btnAdd{
+                background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #D017EE 89.71%);
+                @include textStyle($text-white, 24px, 600, 29px);
+                padding: 18px 24px;
+            }
+        }
+    }
+}
+.realateProdcut{
+    padding-top: 100px;
+    .container{
+        .realate-content{
+            .realateItem-group{
+                .realateItem{
+                    margin-top: 30px;
+                    .card{
+                        background: $bg-gray;
+                        border: none;
+                        img{
+                            padding: 30px;
+                        }
+                        .card-body{
+                            padding-bottom: 0px;
+                            #id{
+                                @include textStyle($text-dark, 24px, 300, 29px)
+                            }
+                            #mota{
+                                @include textStyle(#cbc9c9, 20px, 300, 24px)
+                            }
+                            #buttons{
+                                .btnBuy{
+                                    height: 64px;
+                                    border-radius: 0px !important;
+                                    background-color: #e1b067;
+                                    @include textStyle($text-dark, 24px, 200, 50px)
+                                }
+                                .btnPrice{
+                                    border-radius: 0px !important;
+                                    background-color: #deddcc;
+                                    @include textStyle($text-dark, 24px, 600, 50px)
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@import './footer';

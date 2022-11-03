@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Detail</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- link gogle font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/detail.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+          <div class="header-top">
+              <div class="logo-brand">
+                  <img src='./assets/img/image3.png' />
+
+              </div>
+              <div class="header-login">
+                  <a class="cart">
+                      <img src='./assets/img/image8.png' />
+
+                  </a>
+                  <h3>(1)</h3>
+                  <!-- <h1>(1)</h1> -->
+                  <a href="#" id="login">Login</a>
+                  <a href="./register.html" id="register">Register</a>
+              </div>
+          </div>
+          <div class="header-bottom">
+              <a href="./index.html" class="home active">Home</a>
+              <a href="#" class="men">Men</a>
+              <a href="#" class="woman">Woman</a>
+              <a href="#" class="kid">Kid</a>
+              <a href="#" class="sport">Sport</a>
+          </div>
+      </div>
+  </header>
+  
+  <!-- product detail -->
+  <section class="productDetail">
+    <div class="container">
+        <div class="detail-content row">
+           <div class="detailimg col-lg-4">
+            <img id="hinhAnh" src="./img/image 5.png" alt="">
+           </div>
+           <div class="detailND col-lg-8">
+            <h1 id="name">Product name</h1>
+            <p id="mota">...</p>
+            <h3>Available size</h3>
+            <div class="buttonGroup" id="btnSize">
+                <button class="btn mx-2 ">38</button>
+                <button class="btn mx-2 ">38</button>
+                <button class="btn mx-2 ">38</button>
+                <button class="btn mx-2 ">38</button>
+            </div>
+            <h2><span id="price"></span>$</h2>
+            <div class="detailSoluong d-flex">
+                <button id="plus" class="btn mx-1" onclick="plusAmout()">+</button>
+                <p id="num">1</p>
+                <button id="minus" class="btn mx-1" onclick="minusAmout()">-</button>
+            </div>
+            <button class="btn btnAdd">Add to cart</button>
+           </div>
+        </div>
+    </div>
+  </section>
+  <!-- relate product -->
+  <section class="realateProdcut">
+    <div class="container">
+      <div class="realate-content">
+        <h1 class="text-center"> - Realate Product - </h1>
+        <div class="realateItem-group row" id="product-list">
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="">
+      <div class=" footer-top">
+        <div class="row footer-top-content">
+          <div class="col-4 footerCol">
+            <h3 class="Ftitle">GET HELP</h3>
+            <ul>
+              <li>Contact us</li>
+              <li>Shopping</li>
+              <li>NIKEiD</li>
+              <li>Nike+</li>
+            </ul>
+          </div>
+          <div class="col-3 footerCol">
+            <h3 class="Ftitle">ORDERS</h3>
+            <ul>
+              <li>Paymeny options</li>
+              <li>Shipping anh delivery</li>
+              <li>Returns</li>
+            </ul>
+          </div>
+          <div class="col-5 footerCol">
+            <h3 class="Ftitle">REGISTER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed ipsum dolor aut ducimus obcaecati iste laboriosam quibusdam ab aliquam officiis.</p>
+            <a href="" class="alink">Learn more</a>
+          </div>
+        </div>
+      </div>
+      <div class=" footer-bottom">
+        <div class="row footer-bottom-content">
+          <div class="col-4 footerCol">
+            <h3 class="Ftitle">EMAIL SIGN UP</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, eaque?</p>
+            <a href="" class="alink">Sign up now</a>
+          </div>
+          <div class="col-3 footerCol">
+            <h3 class="Ftitle">GIFT CARDS</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis, eaque?</p>
+            <a href="" class="alink">View cards</a>
+          </div>
+          <div class="col-5 footerCol">
+            <h3 class="Ftitle">STORES NEAR YOU</h3>
+            <p>Lorem, ipsum dolor. Lorem, ipsum dolor.</p>
+            <a href="" class="alink">View cards</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@3.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/axios.min.js" integrity="sha512-0qU9M9jfqPw6FKkPafM3gy2CBAvUWnYVOfNPDYKVuRTel1PrciTj+a9P3loJB+j0QmN2Y0JYQmkBBS8W+mbezg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./models/detail.js"></script>
+</body>
+
+</html>
