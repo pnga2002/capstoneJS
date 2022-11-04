@@ -19,7 +19,8 @@ document.querySelector('#btnSubmit').onclick = function (){
         data:emp
     })
     promise.then(function(res){
-        console.log(res.data)
+        console.log(res.data);
+        alert('Dang Ky Thanh Cong')
     })
     promise.catch(function(err){
         console.log(err)
