@@ -16,8 +16,25 @@ var token_cybersoft = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJGcm9u
         document.querySelector('#name').innerHTML = product.name;
         document.querySelector('#mota').innerHTML = product.description;
         document.querySelector('#price').innerHTML = product.price;
-        // console.log(product.size)
+        console.log(product.size)
         renderSize(product.size)
+        let allBtn = document.querySelectorAll('#btnSize .size')
+        function removeActiveClasses () {
+            allBtn.forEach((btn) => {
+                btn.classList.remove('active')
+            })
+        }
+        let changeTheme = allBtn.forEach((item)=>{
+            
+            item.onclick = (e) => {
+                removeActiveClasses ()
+                let target = e.target;
+                // item.classList.remove('active');
+                target.classList.add('active');
+          
+            }
+        })
+        console.log(allBtn)
     })
     promise.catch(function(err){
         console.log(err)
@@ -25,14 +42,19 @@ var token_cybersoft = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0ZW5Mb3AiOiJGcm9u
 })();
 
 function renderSize(arrSize){
+    // let active = (name)=> {alert(name)}
     var contentHTML='';
     for(var i=0;i<arrSize.length;i++){
         contentHTML+=`
-            <button class="btn mx-2 ">${arrSize[i]}</button>
+            <button class="btn mx-2 size" 
+            
+            >${arrSize[i]}</button>
         `;
     }
+ 
+    
     document.querySelector('#btnSize').innerHTML = contentHTML;
-    // console.log(contentHTML)
+    console.log(contentHTML)
 }
 
 (function getAllProduct(){
@@ -45,7 +67,7 @@ function renderSize(arrSize){
         }
     })
     promise.then(function(res){
-        console.log(res.data.content)
+        // console.log(res.data.content)
         //gọi hàm để tạo ui
         renderProductCard(res.data.content);
     })

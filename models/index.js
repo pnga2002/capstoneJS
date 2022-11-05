@@ -33,8 +33,7 @@
                 document.querySelector('.buynow3').setAttribute('href',`./detail.html?id=${arrayProduct[random].id}`)
                 console.log(arrayProduct[random].shortDescription)
         }
-        random1(
-        )
+        random1()
         random2()
         random3()
 
